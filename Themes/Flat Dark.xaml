@@ -272,14 +272,17 @@
         </Setter>
     </Style>
 
+    <BitmapImage x:Key="StartIconImage"
+                 UriSource="../Resources/startflat.png" />
+
     <Style TargetType="Image"
            x:Key="StartIcon"
            BasedOn="{StaticResource StartIcon}">
-        <Setter Property="Margin"
-                Value="0,0,0,0" />
         <Setter Property="Width"
-                Value="0" />
+                Value="15" />
         <Setter Property="Height"
+                Value="13" />
+        <Setter Property="Margin"
                 Value="0" />
     </Style>
 
@@ -287,20 +290,13 @@
         x:Key="StartLabel"
         BasedOn="{StaticResource StartLabel}">
         <Setter Property="Text"
-                Value="⊞" />
-        <Setter Property="FontSize"
-                Value="24" />
+                Value="" />
+        <Setter Property="Width"
+                Value="0" />
+        <Setter Property="Height"
+                Value="0" />
         <Setter Property="Margin"
-                Value="4,-8,4,0" />
-        <Style.Triggers>
-            <DataTrigger Binding="{Binding Path=Orientation, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
-                         Value="Vertical">
-                <DataTrigger.Setters>
-                    <Setter Property="Padding"
-                            Value="32,0" />
-                </DataTrigger.Setters>
-            </DataTrigger>
-        </Style.Triggers>
+                Value="0" />
     </Style>
 
     <ToolTip x:Key="StartButtonTip" Content="{DynamicResource start_button_tip}"/>
@@ -323,7 +319,7 @@
                                         BorderBrush="{DynamicResource ButtonShadow}"
                                         Background="{DynamicResource StartButtonBackground}"
                                         x:Name="BottomRightBorder">
-                                    <ContentPresenter Margin="2,4,2,2"
+                                    <ContentPresenter Margin="9,1,9,1"
                                                       x:Name="Content" />
                                 </Border>
                             </Border>
@@ -375,6 +371,14 @@
                                     Property="Background"
                                     Value="{DynamicResource StartButtonPressedBackground}" />
                         </Trigger>
+                        <DataTrigger Binding="{Binding Path=Orientation, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
+                                     Value="Vertical">
+                            <DataTrigger.Setters>
+                                <Setter TargetName="BottomRightBorder"
+                                        Property="Padding"
+                                        Value="32,4" />
+                            </DataTrigger.Setters>
+                        </DataTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>
