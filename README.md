@@ -12,4 +12,6 @@ Custom themes for [RetroBar](https://github.com/dremin/RetroBar)
 
 ## Usage
 
+[Download](https://github.com/ibillingsley/RetroBar-Themes/archive/refs/heads/master.zip)
+
 Copy the `Themes` and `Resources` folders to `%localappdata%\RetroBar` or the directory containing `RetroBar.exe`
