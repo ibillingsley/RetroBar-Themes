@@ -140,7 +140,7 @@
                         <Border BorderThickness="0,0,0,2"
                                 BorderBrush="{DynamicResource ButtonInactiveBorder}"
                                 Background="{TemplateBinding Background}"
-                                Padding="0,3"
+                                Padding="2,3"
                                 x:Name="ButtonBorder">
                             <ContentPresenter Margin="3,3,3,2"
                                               x:Name="Content" />
@@ -199,7 +199,7 @@
                         <Border BorderThickness="0,0,0,2"
                             BorderBrush="{DynamicResource ButtonActiveBorder}"
                             Background="{TemplateBinding Background}"
-                            Padding="0,3"
+                            Padding="2,3"
                             x:Name="ButtonBorder">
                             <ContentPresenter Margin="3,3,3,2"
                                           x:Name="Content" />
@@ -249,7 +249,7 @@
                         <Border BorderThickness="0,0,0,2"
                             BorderBrush="{DynamicResource ButtonFlashingBorder}"
                             Background="{TemplateBinding Background}"
-                            Padding="0,3"
+                            Padding="2,3"
                             x:Name="ButtonBorder">
                             <ContentPresenter Margin="3,3,3,2"
                                           x:Name="Content" />
