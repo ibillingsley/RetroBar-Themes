@@ -130,7 +130,7 @@
         <Setter Property="Foreground"
                 Value="{DynamicResource ButtonForeground}" />
         <Setter Property="Margin"
-                Value="0,0,5,0" />
+                Value="0,0,7,0" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
@@ -151,11 +151,32 @@
                                      Value="Vertical">
                             <DataTrigger.Setters>
                                 <Setter TargetName="ButtonBorder"
+                                        Property="Padding"
+                                        Value="0,2,0,3" />
+                            </DataTrigger.Setters>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Path=AppBarEdge, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
+                                     Value="Left">
+                            <DataTrigger.Setters>
+                                <Setter TargetName="ButtonBorder"
                                         Property="BorderThickness"
                                         Value="2,0,0,0" />
+                            </DataTrigger.Setters>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Path=AppBarEdge, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
+                                     Value="Top">
+                            <DataTrigger.Setters>
                                 <Setter TargetName="ButtonBorder"
-                                        Property="Padding"
-                                        Value="0,2,0,2" />
+                                        Property="BorderThickness"
+                                        Value="0,2,0,0" />
+                            </DataTrigger.Setters>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Path=AppBarEdge, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
+                                     Value="Right">
+                            <DataTrigger.Setters>
+                                <Setter TargetName="ButtonBorder"
+                                        Property="BorderThickness"
+                                        Value="0,0,2,0" />
                             </DataTrigger.Setters>
                         </DataTrigger>
                         <Trigger Property="IsMouseOver"
@@ -179,7 +200,7 @@
                          Value="Vertical">
                 <DataTrigger.Setters>
                     <Setter Property="Margin"
-                            Value="0,0,0,5" />
+                            Value="0,0,0,7" />
                 </DataTrigger.Setters>
             </DataTrigger>
         </Style.Triggers>
@@ -210,11 +231,32 @@
                                      Value="Vertical">
                             <DataTrigger.Setters>
                                 <Setter TargetName="ButtonBorder"
+                                        Property="Padding"
+                                        Value="0,2,0,3" />
+                            </DataTrigger.Setters>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Path=AppBarEdge, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
+                                     Value="Left">
+                            <DataTrigger.Setters>
+                                <Setter TargetName="ButtonBorder"
                                         Property="BorderThickness"
                                         Value="2,0,0,0" />
+                            </DataTrigger.Setters>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Path=AppBarEdge, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
+                                     Value="Top">
+                            <DataTrigger.Setters>
                                 <Setter TargetName="ButtonBorder"
-                                        Property="Padding"
-                                        Value="0,2,0,2" />
+                                        Property="BorderThickness"
+                                        Value="0,2,0,0" />
+                            </DataTrigger.Setters>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Path=AppBarEdge, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
+                                     Value="Right">
+                            <DataTrigger.Setters>
+                                <Setter TargetName="ButtonBorder"
+                                        Property="BorderThickness"
+                                        Value="0,0,2,0" />
                             </DataTrigger.Setters>
                         </DataTrigger>
                         <Trigger Property="IsMouseOver"
@@ -260,11 +302,32 @@
                                      Value="Vertical">
                             <DataTrigger.Setters>
                                 <Setter TargetName="ButtonBorder"
+                                        Property="Padding"
+                                        Value="0,2,0,3" />
+                            </DataTrigger.Setters>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Path=AppBarEdge, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
+                                     Value="Left">
+                            <DataTrigger.Setters>
+                                <Setter TargetName="ButtonBorder"
                                         Property="BorderThickness"
                                         Value="2,0,0,0" />
+                            </DataTrigger.Setters>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Path=AppBarEdge, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
+                                     Value="Top">
+                            <DataTrigger.Setters>
                                 <Setter TargetName="ButtonBorder"
-                                        Property="Padding"
-                                        Value="0,2,0,2" />
+                                        Property="BorderThickness"
+                                        Value="0,2,0,0" />
+                            </DataTrigger.Setters>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Path=AppBarEdge, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
+                                     Value="Right">
+                            <DataTrigger.Setters>
+                                <Setter TargetName="ButtonBorder"
+                                        Property="BorderThickness"
+                                        Value="0,0,2,0" />
                             </DataTrigger.Setters>
                         </DataTrigger>
                         <Trigger Property="IsPressed"
