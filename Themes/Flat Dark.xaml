@@ -701,6 +701,12 @@
         </Style.Triggers>
     </Style>
 
+    <Style TargetType="Image"
+           x:Key="ShowDesktopIcon">
+        <Setter Property="Width"
+                Value="0" />
+    </Style>
+
     <Style TargetType="ToggleButton"
            x:Key="ShowDesktopButton">
         <Setter Property="OverridesDefaultStyle"
@@ -715,10 +721,10 @@
             <Setter.Value>
                 <ControlTemplate TargetType="ToggleButton">
                     <Border Background="Transparent"
-                            Padding="0,1,1,1"
+                            Padding="0"
                             Name="ButtonOuterBorder">
-                        <Border BorderThickness="1"
-                                BorderBrush="{TemplateBinding Background}"
+                        <Border BorderThickness="1,0,0,0"
+                                BorderBrush="{DynamicResource ButtonHoverBorder}"
                                 Background="{TemplateBinding Background}"
                                 Padding="3,2"
                                 x:Name="ButtonBorder">
@@ -729,9 +735,12 @@
                         <DataTrigger Binding="{Binding Path=Orientation, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
                                      Value="Vertical">
                             <DataTrigger.Setters>
-                                <Setter TargetName="ButtonOuterBorder"
+                                <Setter TargetName="ButtonBorder"
+                                        Property="BorderThickness"
+                                        Value="0,1,0,0" />
+                                <Setter TargetName="ButtonBorder"
                                         Property="Padding"
-                                        Value="0,0,0,2" />
+                                        Value="48,3" />
                             </DataTrigger.Setters>
                         </DataTrigger>
                         <Trigger Property="IsMouseOver"
