@@ -19,8 +19,8 @@
     <SolidColorBrush x:Key="ButtonHoverBackground" Color="#222222" />
     <SolidColorBrush x:Key="ButtonPressedBorder" Color="#181818" />
     <SolidColorBrush x:Key="ButtonPressedBackground" Color="#181818" />
-    <SolidColorBrush x:Key="ButtonFlashingBorder" Color="#DD7700" />
-    <SolidColorBrush x:Key="ButtonFlashingBackground" Color="#442200" />
+    <SolidColorBrush x:Key="ButtonFlashingBorder" Color="#FF7200" />
+    <SolidColorBrush x:Key="ButtonFlashingBackground" Color="#995219" />
 
     <SolidColorBrush x:Key="TrayBorder" Color="#000000" />
     <SolidColorBrush x:Key="TrayInnerBorder" Color="#000000" />
@@ -96,19 +96,19 @@
         <Setter Property="Foreground"
                 Value="{DynamicResource ButtonForeground}" />
         <Setter Property="Margin"
-                Value="0,0,7,0" />
+                Value="0,0,1,0" />
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Border Background="Transparent"
-                            Padding="0"
+                            Padding="4,0"
                             Name="ButtonOuterBorder">
                         <Border BorderThickness="0,0,0,2"
                                 BorderBrush="{DynamicResource ButtonInactiveBorder}"
                                 Background="{TemplateBinding Background}"
-                                Padding="2,4,2,2"
+                                Padding="4,3,4,1"
                                 x:Name="ButtonBorder">
-                            <ContentPresenter Margin="3"
+                            <ContentPresenter Margin="0,4"
                                               x:Name="Content" />
                         </Border>
                     </Border>
@@ -116,9 +116,15 @@
                         <DataTrigger Binding="{Binding Path=Orientation, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
                                      Value="Vertical">
                             <DataTrigger.Setters>
+                                <Setter TargetName="ButtonOuterBorder"
+                                        Property="Padding"
+                                        Value="0,4" />
                                 <Setter TargetName="ButtonBorder"
                                         Property="Padding"
-                                        Value="3,2" />
+                                        Value="2,3" />
+                                <Setter TargetName="Content"
+                                        Property="Margin"
+                                        Value="4,0" />
                             </DataTrigger.Setters>
                         </DataTrigger>
                         <DataTrigger Binding="{Binding Path=AppBarEdge, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
@@ -134,7 +140,7 @@
                             <DataTrigger.Setters>
                                 <Setter TargetName="ButtonBorder"
                                         Property="Padding"
-                                        Value="2,2,2,4" />
+                                        Value="4,1,4,3" />
                                 <Setter TargetName="ButtonBorder"
                                         Property="BorderThickness"
                                         Value="0,2,0,0" />
@@ -150,15 +156,27 @@
                         </DataTrigger>
                         <Trigger Property="IsMouseOver"
                                  Value="True">
+                            <Setter TargetName="ButtonOuterBorder"
+                                    Property="Padding"
+                                    Value="0" />
                             <Setter TargetName="ButtonBorder"
                                     Property="Background"
                                     Value="{DynamicResource ButtonHoverBackground}" />
+                            <Setter TargetName="Content"
+                                    Property="Margin"
+                                    Value="4" />
                         </Trigger>
                         <Trigger Property="IsPressed"
                                  Value="True">
+                            <Setter TargetName="ButtonOuterBorder"
+                                    Property="Padding"
+                                    Value="0" />
                             <Setter TargetName="ButtonBorder"
                                     Property="Background"
                                     Value="{DynamicResource ButtonPressedBackground}" />
+                            <Setter TargetName="Content"
+                                    Property="Margin"
+                                    Value="4" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
@@ -169,7 +187,7 @@
                          Value="Vertical">
                 <DataTrigger.Setters>
                     <Setter Property="Margin"
-                            Value="0,0,0,7" />
+                            Value="0,0,0,1" />
                 </DataTrigger.Setters>
             </DataTrigger>
         </Style.Triggers>
@@ -187,11 +205,11 @@
                             Padding="0"
                             Name="ButtonOuterBorder">
                         <Border BorderThickness="0,0,0,2"
-                            BorderBrush="{DynamicResource ButtonActiveBorder}"
-                            Background="{TemplateBinding Background}"
-                            Padding="2,4,2,2"
-                            x:Name="ButtonBorder">
-                            <ContentPresenter Margin="3"
+                                BorderBrush="{DynamicResource ButtonActiveBorder}"
+                                Background="{TemplateBinding Background}"
+                                Padding="4,3,4,1"
+                                x:Name="ButtonBorder">
+                            <ContentPresenter Margin="4"
                                               x:Name="Content" />
                         </Border>
                     </Border>
@@ -201,7 +219,7 @@
                             <DataTrigger.Setters>
                                 <Setter TargetName="ButtonBorder"
                                         Property="Padding"
-                                        Value="3,2" />
+                                        Value="2,3" />
                             </DataTrigger.Setters>
                         </DataTrigger>
                         <DataTrigger Binding="{Binding Path=AppBarEdge, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
@@ -217,7 +235,7 @@
                             <DataTrigger.Setters>
                                 <Setter TargetName="ButtonBorder"
                                         Property="Padding"
-                                        Value="2,2,2,4" />
+                                        Value="4,1,4,3" />
                                 <Setter TargetName="ButtonBorder"
                                         Property="BorderThickness"
                                         Value="0,2,0,0" />
@@ -258,14 +276,14 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Border Background="Transparent"
-                            Padding="0"
+                            Padding="4,0"
                             Name="ButtonOuterBorder">
                         <Border BorderThickness="0,0,0,2"
-                            BorderBrush="{DynamicResource ButtonFlashingBorder}"
-                            Background="{TemplateBinding Background}"
-                            Padding="2,4,2,2"
-                            x:Name="ButtonBorder">
-                            <ContentPresenter Margin="3"
+                                BorderBrush="{DynamicResource ButtonFlashingBorder}"
+                                Background="{TemplateBinding Background}"
+                                Padding="4,3,4,1"
+                                x:Name="ButtonBorder">
+                            <ContentPresenter Margin="0,4"
                                               x:Name="Content" />
                         </Border>
                     </Border>
@@ -273,9 +291,15 @@
                         <DataTrigger Binding="{Binding Path=Orientation, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
                                      Value="Vertical">
                             <DataTrigger.Setters>
+                                <Setter TargetName="ButtonOuterBorder"
+                                        Property="Padding"
+                                        Value="0,4" />
                                 <Setter TargetName="ButtonBorder"
                                         Property="Padding"
-                                        Value="3,2" />
+                                        Value="2,3" />
+                                <Setter TargetName="Content"
+                                        Property="Margin"
+                                        Value="4,0" />
                             </DataTrigger.Setters>
                         </DataTrigger>
                         <DataTrigger Binding="{Binding Path=AppBarEdge, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Window}}}"
@@ -291,7 +315,7 @@
                             <DataTrigger.Setters>
                                 <Setter TargetName="ButtonBorder"
                                         Property="Padding"
-                                        Value="2,2,2,4" />
+                                        Value="4,1,4,3" />
                                 <Setter TargetName="ButtonBorder"
                                         Property="BorderThickness"
                                         Value="0,2,0,0" />
@@ -305,8 +329,23 @@
                                         Value="0,0,2,0" />
                             </DataTrigger.Setters>
                         </DataTrigger>
+                        <Trigger Property="IsMouseOver"
+                                 Value="True">
+                            <Setter TargetName="ButtonOuterBorder"
+                                    Property="Padding"
+                                    Value="0" />
+                            <Setter TargetName="Content"
+                                    Property="Margin"
+                                    Value="4" />
+                        </Trigger>
                         <Trigger Property="IsPressed"
                                  Value="True">
+                            <Setter TargetName="ButtonOuterBorder"
+                                    Property="Padding"
+                                    Value="0" />
+                            <Setter TargetName="Content"
+                                    Property="Margin"
+                                    Value="4" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
