@@ -78,13 +78,20 @@
                         <Border BorderThickness="0"
                                 BorderBrush="{DynamicResource TrayInnerBorder}"
                                 Background="{DynamicResource TrayBackground}"
-                                Padding="2">
+                                Padding="0">
                             <ContentPresenter />
                         </Border>
                     </Border>
                 </ControlTemplate>
             </Setter.Value>
         </Setter>
+    </Style>
+
+    <Style TargetType="Image"
+           x:Key="NotifyIcon"
+           BasedOn="{StaticResource NotifyIcon}">
+        <Setter Property="Margin"
+                Value="4" />
     </Style>
 
     <Style TargetType="Button"
@@ -353,6 +360,13 @@
         </Setter>
     </Style>
 
+    <Style TargetType="Image"
+           x:Key="TaskIcon"
+           BasedOn="{StaticResource TaskIcon}">
+        <Setter Property="Margin"
+                Value="0,0,4,0" />
+    </Style>
+
     <Style TargetType="ContentControl"
            x:Key="TaskButtonThumbnail">
         <Setter Property="Template">
@@ -542,7 +556,7 @@
                             Background="{TemplateBinding Background}"
                             x:Name="ButtonBorder">
                         <ContentPresenter HorizontalAlignment="Center"
-                                          Margin="4,-4,4,-2"
+                                          Margin="4,-2,3,-3"
                                           x:Name="Content" />
                     </Border>
                     <ControlTemplate.Triggers>
