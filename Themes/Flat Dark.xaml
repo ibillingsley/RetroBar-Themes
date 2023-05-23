@@ -5,6 +5,7 @@
     <FontFamily x:Key="GlobalFontFamily">Segoe UI</FontFamily>
     <system:Double x:Key="GlobalFontSize">12</system:Double>
     <system:Double x:Key="TaskbarHeight">24</system:Double>
+    <system:Double x:Key="TaskbarWidth">90</system:Double>
     <system:Boolean x:Key="InvertSystemNotifyIcons">False</system:Boolean>
 
     <SolidColorBrush x:Key="ButtonShadow" Color="#000000" />
@@ -441,7 +442,7 @@
                             <DataTrigger.Setters>
                                 <Setter TargetName="BottomRightBorder"
                                         Property="Padding"
-                                        Value="32,6" />
+                                        Value="28,6" />
                             </DataTrigger.Setters>
                         </DataTrigger>
                     </ControlTemplate.Triggers>
@@ -465,10 +466,10 @@
                             Padding="0"
                             Name="ButtonOuterBorder">
                         <Border BorderThickness="0"
-                            Padding="2"
-                            BorderBrush="{DynamicResource ButtonInactiveBorder}"
-                            Background="{TemplateBinding Background}"
-                            x:Name="ButtonBorder">
+                                Padding="2"
+                                BorderBrush="{DynamicResource ButtonInactiveBorder}"
+                                Background="{TemplateBinding Background}"
+                                x:Name="ButtonBorder">
                             <ContentPresenter Margin="2"
                                               x:Name="Content" />
                         </Border>
