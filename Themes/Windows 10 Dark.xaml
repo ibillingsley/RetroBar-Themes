@@ -432,7 +432,7 @@
                                         BorderBrush="{DynamicResource ButtonShadow}"
                                         Background="{DynamicResource StartButtonBackground}"
                                         x:Name="BottomRightBorder">
-                                    <ContentPresenter Margin="10,1,10,2"
+                                    <ContentPresenter Margin="10,7"
                                                       x:Name="Content" />
                                 </Border>
                             </Border>
@@ -489,7 +489,7 @@
                             <DataTrigger.Setters>
                                 <Setter TargetName="BottomRightBorder"
                                         Property="Padding"
-                                        Value="28,6" />
+                                        Value="28,2" />
                             </DataTrigger.Setters>
                         </DataTrigger>
                     </ControlTemplate.Triggers>
