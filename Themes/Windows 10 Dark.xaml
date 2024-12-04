@@ -5,6 +5,7 @@
     <FontFamily x:Key="GlobalFontFamily">Segoe UI</FontFamily>
     <system:Double x:Key="GlobalFontSize">12</system:Double>
     <system:Double x:Key="TaskbarHeight">30</system:Double>
+    <system:Double x:Key="TaskbarRowHeight">30</system:Double>
     <system:Double x:Key="TaskbarWidth">93</system:Double>
     <system:Boolean x:Key="InvertSystemNotifyIcons">False</system:Boolean>
 
